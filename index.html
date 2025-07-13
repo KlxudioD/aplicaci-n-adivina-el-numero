@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>App2_AdivinaElNumero</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="botones_teclado">
+            <div class="pantalla">
+                <input type="text" readonly id="pantalla_input">
+            </div>
+            <div class="teclado">
+                <input type="button" value="9">
+                <input type="button" value="8">
+                <input type="button" value="7">
+                <input type="button" value="6">
+                <input type="button" value="5">
+                <input type="button" value="4">
+                <input type="button" value="3">
+                <input type="button" value="2">
+                <input type="button" value="1">
+                <input type="button" value="0">
+                <input type="button" value="⌫" id="btnLimpiar">
+            </div>
+            <div class="botones">
+                <button type="submit" id="btnEnviar">Enviar</button>
+                <button type="reset" id="btnBorrar">Borrar</button>
+            </div>
+        </div>
+
+        <div class="resultado" id="respuesta">
+            <h3>Tu respuesta es:</h3>
+            <div id="imagenEstado" class="imagenes"></div>
+            <div class="parrafo">
+                <p id="parrafoRespuesta"></p>
+                <p id="intentos">N° de intentos: </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

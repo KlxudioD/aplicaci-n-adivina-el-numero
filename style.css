@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f1f1f1;
+}
+
+.contenedor {
+    width: 600px;
+    height: 600px;
+    background: #1e1e2f;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    overflow: hidden;
+}
+
+.botones_teclado {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.botones_teclado input[type="text"] {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 40px;
+    text-align: center;
+    background-color: #2e2e40;
+    color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.fila-cero {
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.teclado input {
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #3a3a4f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.teclado input:hover {
+    background-color: #5e5e8c;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.botones button {
+    width: 48%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #6c63ff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.botones button:hover {
+    background-color: #857dff;
+}
+
+.resultado {
+    background-color: #292944;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resultado h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.imagenes {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.imagenes img {
+    max-width: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img.visible {
+    display: block;
+    opacity: 1;
+}
+
+img.esperando {
+    animation: girar 3s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.parrafo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#parrafoRespuesta {
+    font-size: 24px;
+    color: #e0e0ff;
+}
+
+.parrafo p {
+    font-size: 18px;
+    color: #ccc;
+}
